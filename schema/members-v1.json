@@ -1,0 +1,43 @@
+{
+	"$schema": "https://json-schema.org/draft/2019-09/schema",
+	"$id": "https://vpn.virtlive.jp/schema/members-v1.json",
+	"title": "ルートスキーマ",
+	"type": "object",
+	"default": {
+		"properties": {
+			"members": {
+				"title": "メンバーリスト",
+				"additionalProperties": {
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string",
+							"title": "名前"
+						},
+						"alphabetName": {
+							"type": "string",
+							"title": "名前(英語)"
+						},
+						"iconPath": {
+							"type": "string",
+							"title": "アイコンのURL"
+						},
+						"homepageUrl": {
+							"type": "string",
+							"title": "WebサイトのURL"
+						},
+						"favs": {
+							"title": "タグ",
+							"type": "array",
+							"uniqueItems": true
+						}
+					},
+					"title": "メンバープロパティ",
+					"required": [
+						"name"
+					]
+				}
+			}
+		}
+	}
+}
